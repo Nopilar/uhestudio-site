@@ -742,3 +742,29 @@ em { font-family: var(--serif); font-style: italic; font-weight: 400; color: var
   .lb__stage { padding: 12px 0; }
   .lb__nav { top: auto; bottom: 70px; transform: none; width: 46px; height: 46px; background: rgba(16,18,13,0.6); }
 }
+
+/* Ficha do projeto sem texto (site em modo portfólio) */
+.project-intro--facts { padding-top: clamp(40px, 5vw, 72px); padding-bottom: clamp(40px, 5vw, 72px); }
+.project-intro--facts .project-intro__grid { grid-template-columns: 1fr; }
+.project-intro--facts .facts {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);
+}
+.project-intro--facts .facts div {
+  grid-template-columns: 1fr; gap: 6px;
+  padding: 18px 20px 18px 0;
+  border: 0;
+}
+.project-intro--facts .facts div + div { padding-left: 20px; border-left: 1px solid var(--line); }
+@media (max-width: 520px) {
+  .project-intro--facts .facts { grid-template-columns: 1fr 1fr; }
+  .project-intro--facts .facts div,
+  .project-intro--facts .facts div + div { padding: 14px 12px 14px 0; border-left: 0; border-bottom: 1px solid var(--line); }
+}
+
+/* Modo portfólio: legendas só com a numeração (as descrições ficam no alt) */
+.gallery figcaption span:last-child { display: none; }
+.lb__caption { visibility: hidden; }
+@media (max-width: 520px) {
+  .project-intro--facts .facts { border-bottom: 0; }
+}
