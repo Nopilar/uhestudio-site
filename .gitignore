@@ -1,0 +1,19 @@
+# Só o que o site usa vai para o GitHub.
+# Fotos originais, identidade visual e anotações ficam só no computador.
+/*
+!/index.html
+!/styles.css
+!/script.js
+!/CNAME
+!/.nojekyll
+!/.gitignore
+!/projetos/
+!/assets/
+/assets/*
+!/assets/img/
+!/assets/fonts/
+/assets/fonts/LEIA-ME.txt
+/assets/img/*
+!/assets/img/brand/
+!/assets/img/projetos/
+_preview*

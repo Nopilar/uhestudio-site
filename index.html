@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Uh! Estúdio — Arquitetura e Interiores</title>
+  <meta name="description" content="Uh! Estúdio é um escritório de arquitetura e interiores. Projetos residenciais, comerciais e de interiores pensados para a vida real.">
+  <meta name="theme-color" content="#152F0F">
+  <link rel="icon" type="image/png" href="assets/img/brand/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;1,300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script>
+    /* Abertura com logo: só na entrada direta da página inicial */
+    (function () {
+      var nav = performance.getEntriesByType && performance.getEntriesByType("navigation")[0];
+      var back = nav && nav.type === "back_forward";
+      if (!location.hash && !back) document.documentElement.classList.add("intro-on");
+    })();
+  </script>
+</head>
+<body>
+
+  <!-- ===== ABERTURA ===== -->
+  <div class="intro" id="intro" aria-hidden="true">
+    <div class="intro__inner">
+      <img class="intro__logo" src="assets/img/brand/logo-laranja.png" alt="" width="1200" height="750">
+      <span class="intro__line"></span>
+    </div>
+  </div>
+
+  <!-- ===== HEADER ===== -->
+  <header class="header" id="header">
+    <a href="#top" class="logo" aria-label="Uh! Estúdio — início">
+      <img class="logo__img" src="assets/img/brand/logo-reduzido-verde.png" alt="Uh!" width="800" height="500">
+      <span class="logo__text">estúdio</span>
+    </a>
+
+    <nav class="nav" id="nav" aria-label="Navegação principal">
+      <a href="#estudio">Estúdio</a>
+      <a href="#projetos">Projetos</a>
+      <a href="#servicos">Serviços</a>
+      <a href="#processo">Processo</a>
+      <a href="#contato">Contato</a>
+    </nav>
+
+    <div class="header__right">
+      <a href="#contato" class="btn btn--small">Iniciar projeto</a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu" aria-expanded="false">
+        <span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="top">
+
+    <!-- ===== HERO ===== -->
+    <section class="hero">
+      <div class="hero__media" id="heroMedia">
+        <figure class="hero__slide is-active" data-title="Casa Ninho e Nutella" data-meta="Residencial · Reforma e interiores" data-href="projetos/casa-ninho-e-nutella.html">
+          <img src="assets/img/projetos/casa-ninho-e-nutella/hero.jpg" alt="Casa Ninho e Nutella — sala de estar com tijolo aparente" loading="eager">
+        </figure>
+        <figure class="hero__slide" data-title="Apê Caetés" data-meta="Interiores · Apartamento" data-href="projetos/ape-caetes.html">
+          <img src="assets/img/projetos/ape-caetes/hero.jpg" alt="Apê Caetés — estar com poltrona de couro e painel de TV" loading="lazy" style="object-position: center 62%">
+        </figure>
+        <figure class="hero__slide" data-title="Casa Montanha" data-meta="Residencial · Arquitetura" data-href="projetos/casa-montanha.html">
+          <img src="assets/img/projetos/casa-montanha/hero.jpg" alt="Casa Montanha — fachada com cobertura inclinada e deck de madeira" loading="lazy">
+        </figure>
+        <figure class="hero__slide" data-title="Escritório 1804" data-meta="Comercial · Escritório" data-href="projetos/escritorio-1804.html">
+          <img src="assets/img/projetos/escritorio-1804/hero.jpg" alt="Escritório 1804 — mesa de reunião com divisórias de vidro e estações de trabalho ao fundo" loading="lazy" style="object-position: center 68%">
+        </figure>
+        <figure class="hero__slide" data-title="Casa Flora" data-meta="Residencial · Interiores" data-href="projetos/casa-flora.html">
+          <img src="assets/img/projetos/casa-flora/hero.jpg" alt="Casa Flora — cozinha integrada com ilha, banquetas de palha e plantas suspensas" loading="lazy" style="object-position: center 40%">
+        </figure>
+        <figure class="hero__slide" data-title="Studio Mooca" data-meta="Interiores · Studio" data-href="projetos/studio-mooca.html">
+          <img src="assets/img/projetos/studio-mooca/hero.jpg" alt="Studio Mooca — cama com parede azul, sofá e cortina" loading="lazy">
+        </figure>
+      </div>
+
+      <div class="hero__overlay"></div>
+
+      <!-- Linhas finas de grade -->
+      <div class="hero__grid" aria-hidden="true"><i></i><i></i><i></i></div>
+
+      <h1 class="sr-only">Uh! Estúdio — Arquitetura e interiores</h1>
+
+      <!-- Legendas técnicas -->
+      <div class="hero__labels">
+        <p><span>Uh! Estúdio</span><span>Arquitetura e interiores</span></p>
+        <p><span>São Paulo — SP</span><span>23.55° S · 46.63° O</span></p>
+        <p><span>+50 projetos</span><span>6 anos de estúdio</span></p>
+        <p class="hero__labels-end"><span>Agora em SP</span><span id="heroClock">--:--</span></p>
+      </div>
+
+      <!-- Marca grande -->
+      <img class="hero__brand" src="assets/img/brand/logo-creme.png" alt="" width="1200" height="750" aria-hidden="true">
+
+      <!-- Projeto em destaque -->
+      <div class="hero__project">
+        <div class="hero__project-info">
+          <span class="hero__project-counter"><span id="heroIndex">01</span> / <span id="heroTotal">06</span></span>
+          <h2 class="hero__project-title" id="heroTitle">Casa Ninho e Nutella</h2>
+          <p class="hero__project-meta" id="heroMeta">Residencial · Reforma e interiores</p>
+          <a href="projetos/casa-ninho-e-nutella.html" class="link-arrow" id="heroLink">Ver projeto</a>
+        </div>
+        <nav class="hero__tabs" id="heroTabs" aria-label="Projetos em destaque"></nav>
+      </div>
+
+      <span class="hero__scroll" aria-hidden="true">Role ↓</span>
+    </section>
+
+    <!-- ===== MARQUEE ===== -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee__track">
+        <span>Residencial</span><i class="star"></i>
+        <span>Interiores</span><i class="star"></i>
+        <span>Comercial</span><i class="star"></i>
+        <span>Reforma</span><i class="star"></i>
+        <span>Residencial</span><i class="star"></i>
+        <span>Interiores</span><i class="star"></i>
+        <span>Comercial</span><i class="star"></i>
+        <span>Reforma</span><i class="star"></i>
+        <span>Residencial</span><i class="star"></i>
+        <span>Interiores</span><i class="star"></i>
+        <span>Comercial</span><i class="star"></i>
+        <span>Reforma</span><i class="star"></i>
+        <span>Residencial</span><i class="star"></i>
+        <span>Interiores</span><i class="star"></i>
+        <span>Comercial</span><i class="star"></i>
+        <span>Reforma</span><i class="star"></i>
+      </div>
+    </div>
+
+    <!-- ===== ESTÚDIO ===== -->
+    <section class="section studio" id="estudio">
+      <div class="section__head">
+        <p class="eyebrow">O estúdio</p>
+        <a href="#contato" class="link-arrow">Conheça o estúdio</a>
+      </div>
+
+      <div class="studio__grid">
+        <div class="studio__text reveal">
+          <img src="assets/img/brand/ornamento-laranja.png" alt="" class="ornament">
+          <h2 class="h2">
+            Transformar vidas através de espaços projetados <em>para cada pessoa.</em>
+          </h2>
+          <p>
+            Nosso intuito é transformar vidas através de espaços projetados de acordo com a necessidade de cada
+            indivíduo. Criar ambientes com afeto, conforto, arte e funcionalidade é o que nos move em cada projeto.
+          </p>
+          <p>
+            Quem está à frente do Uh! Estúdio é a Luísa, arquiteta formada pela Universidade Belas Artes de São Paulo.
+            Atuamos do estudo preliminar ao acompanhamento de obra, com processos transparentes do início ao fim.
+          </p>
+        </div>
+
+        <div class="studio__aside reveal">
+          <ul class="stats">
+            <li><strong>+50</strong><span>projetos entregues</span></li>
+            <li><strong>6</strong><span>anos de estúdio</span></li>
+          </ul>
+          <figure class="studio__img">
+            <img src="assets/img/projetos/casa-ninho-e-nutella/casa-ninho-05.jpg" alt="Janelas em arco da Casa Ninho e Nutella" loading="lazy">
+            <img src="assets/img/brand/logo-reduzido-laranjaclaro.png" alt="" class="studio__img-mark">
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== PROJETOS ===== -->
+    <section class="section projects" id="projetos">
+      <div class="section__head">
+        <p class="eyebrow">Projetos em destaque</p>
+        <div class="filters" id="filters">
+          <button class="is-active" data-filter="all">Todos</button>
+          <button data-filter="arquitetura">Arquitetura</button>
+          <button data-filter="interiores">Interiores</button>
+          <button data-filter="comercial">Comercial</button>
+        </div>
+      </div>
+
+      <div class="projects__grid" id="projectsGrid">
+
+        <article class="card reveal" data-cat="arquitetura interiores">
+          <a href="projetos/casa-ninho-e-nutella.html" class="card__media">
+            <img src="assets/img/projetos/casa-ninho-e-nutella/cover.jpg" alt="Casa Ninho e Nutella — sala de estar com tijolo aparente" loading="lazy">
+          </a>
+          <div class="card__body">
+            <div class="card__meta"><span>Residencial</span><span>Reforma e interiores</span></div>
+            <h3 class="card__title"><a href="projetos/casa-ninho-e-nutella.html">Casa Ninho e Nutella</a></h3>
+            <a href="projetos/casa-ninho-e-nutella.html" class="link-arrow">Ver projeto</a>
+          </div>
+        </article>
+
+        <article class="card reveal" data-cat="interiores">
+          <a href="projetos/ape-caetes.html" class="card__media">
+            <img src="assets/img/projetos/ape-caetes/cover.jpg" alt="Apê Caetés — estar com poltrona de couro e painel de TV" loading="lazy">
+          </a>
+          <div class="card__body">
+            <div class="card__meta"><span>Interiores</span><span>Apartamento</span></div>
+            <h3 class="card__title"><a href="projetos/ape-caetes.html">Apê Caetés</a></h3>
+            <a href="projetos/ape-caetes.html" class="link-arrow">Ver projeto</a>
+          </div>
+        </article>
+
+        <article class="card reveal" data-cat="arquitetura">
+          <a href="projetos/casa-montanha.html" class="card__media">
+            <img src="assets/img/projetos/casa-montanha/cover.jpg" alt="Casa Montanha — fachada com cobertura inclinada e deck de madeira" loading="lazy">
+          </a>
+          <div class="card__body">
+            <div class="card__meta"><span>Residencial</span><span>Arquitetura</span></div>
+            <h3 class="card__title"><a href="projetos/casa-montanha.html">Casa Montanha</a></h3>
+            <a href="projetos/casa-montanha.html" class="link-arrow">Ver projeto</a>
+          </div>
+        </article>
+
+        <article class="card reveal" data-cat="comercial interiores">
+          <a href="projetos/escritorio-1804.html" class="card__media">
+            <img src="assets/img/projetos/escritorio-1804/cover.jpg" alt="Escritório 1804 — mesa de reunião com divisórias de vidro e estações de trabalho ao fundo" loading="lazy">
+          </a>
+          <div class="card__body">
+            <div class="card__meta"><span>Comercial</span><span>Escritório</span></div>
+            <h3 class="card__title"><a href="projetos/escritorio-1804.html">Escritório 1804</a></h3>
+            <a href="projetos/escritorio-1804.html" class="link-arrow">Ver projeto</a>
+          </div>
+        </article>
+
+        <article class="card reveal" data-cat="interiores">
+          <a href="projetos/casa-flora.html" class="card__media">
+            <img src="assets/img/projetos/casa-flora/cover.jpg" alt="Casa Flora — cozinha integrada com ilha, banquetas de palha e plantas suspensas" loading="lazy">
+          </a>
+          <div class="card__body">
+            <div class="card__meta"><span>Residencial</span><span>Interiores</span></div>
+            <h3 class="card__title"><a href="projetos/casa-flora.html">Casa Flora</a></h3>
+            <a href="projetos/casa-flora.html" class="link-arrow">Ver projeto</a>
+          </div>
+        </article>
+
+        <article class="card reveal" data-cat="interiores">
+          <a href="projetos/studio-mooca.html" class="card__media">
+            <img src="assets/img/projetos/studio-mooca/cover.jpg" alt="Studio Mooca — cama com parede azul, sofá e cortina" loading="lazy">
+          </a>
+          <div class="card__body">
+            <div class="card__meta"><span>Interiores</span><span>Studio</span></div>
+            <h3 class="card__title"><a href="projetos/studio-mooca.html">Studio Mooca</a></h3>
+            <a href="projetos/studio-mooca.html" class="link-arrow">Ver projeto</a>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ===== SERVIÇOS ===== -->
+    <section class="section services" id="servicos">
+      <div class="section__head">
+        <p class="eyebrow">Serviços</p>
+        <h2 class="h2">O que fazemos, <em>do desenho à obra.</em></h2>
+      </div>
+      <div class="services__grid">
+        <div class="service reveal">
+          <i class="star star--lg"></i>
+          <div>
+            <h3>Projeto arquitetônico</h3>
+            <p>Casas, reformas e ampliações. Do estudo de viabilidade ao projeto executivo completo, com compatibilização de disciplinas.</p>
+          </div>
+        </div>
+        <div class="service reveal">
+          <i class="star star--lg"></i>
+          <div>
+            <h3>Projeto de interiores</h3>
+            <p>Layout, iluminação, marcenaria e especificação de acabamentos. Ambientes que funcionam no dia a dia e têm identidade.</p>
+          </div>
+        </div>
+        <div class="service reveal">
+          <i class="star star--lg"></i>
+          <div>
+            <h3>Espaços comerciais</h3>
+            <p>Lojas, cafés, clínicas e escritórios. Projetos que traduzem a marca em espaço e otimizam a experiência do cliente.</p>
+          </div>
+        </div>
+        <div class="service reveal">
+          <i class="star star--lg"></i>
+          <div>
+            <h3>Acompanhamento de obra</h3>
+            <p>Visitas técnicas, gestão de fornecedores e controle de qualidade para que o projeto chegue à obra do jeito que foi pensado.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== PROCESSO ===== -->
+    <section class="section process" id="processo">
+      <div class="section__head">
+        <p class="eyebrow">Nosso processo</p>
+        <h2 class="h2">Do primeiro encontro<br><em>à entrega das chaves.</em></h2>
+      </div>
+      <ol class="steps">
+        <li class="step reveal">
+          <span class="step__num">01</span>
+          <div>
+            <h3>Briefing e escuta</h3>
+            <p>Conversa inicial, visita ao local e levantamento de necessidades, referências e orçamento.</p>
+          </div>
+        </li>
+        <li class="step reveal">
+          <span class="step__num">02</span>
+          <div>
+            <h3>Estudo preliminar</h3>
+            <p>Primeiras propostas de layout, volumetria e conceito. Apresentação com plantas, croquis e imagens 3D.</p>
+          </div>
+        </li>
+        <li class="step reveal">
+          <span class="step__num">03</span>
+          <div>
+            <h3>Projeto executivo</h3>
+            <p>Detalhamento técnico completo: plantas, cortes, marcenaria, elétrica, hidráulica e memorial descritivo.</p>
+          </div>
+        </li>
+        <li class="step reveal">
+          <span class="step__num">04</span>
+          <div>
+            <h3>Obra e entrega</h3>
+            <p>Acompanhamento de obra, orientação às equipes e ajustes finais até a entrega do espaço pronto para viver.</p>
+          </div>
+        </li>
+      </ol>
+    </section>
+
+    <!-- ===== DEPOIMENTOS ===== -->
+    <section class="section quotes">
+      <div class="section__head">
+        <p class="eyebrow">O que dizem nossos clientes</p>
+      </div>
+      <div class="quotes__grid">
+        <blockquote class="quote reveal">
+          <img src="assets/img/brand/seta-laranja.png" alt="" class="quote__mark">
+          <p>O Uh! entendeu exatamente como a gente vive. A casa ficou leve, iluminada e com a nossa cara.</p>
+          <footer>Cliente · Projeto residencial</footer>
+        </blockquote>
+        <blockquote class="quote reveal">
+          <img src="assets/img/brand/seta-laranja.png" alt="" class="quote__mark">
+          <p>Processo transparente do começo ao fim. Sabíamos o que esperar em cada etapa e o resultado superou.</p>
+          <footer>Cliente · Projeto de interiores</footer>
+        </blockquote>
+        <blockquote class="quote reveal">
+          <img src="assets/img/brand/seta-laranja.png" alt="" class="quote__mark">
+          <p>O café virou ponto de encontro do bairro. O projeto traduziu a marca em espaço de um jeito que não imaginávamos.</p>
+          <footer>Cliente · Projeto comercial</footer>
+        </blockquote>
+      </div>
+    </section>
+
+    <!-- ===== CONTATO ===== -->
+    <section class="section contact" id="contato">
+      <div class="contact__grid">
+        <div class="contact__text reveal">
+          <p class="eyebrow">Contato</p>
+          <h2 class="h2">Vamos conversar sobre <em>o seu projeto?</em></h2>
+          <ul class="contact__list">
+            <li><span>E-mail</span><a href="mailto:ola@uhestudio.com">ola@uhestudio.com</a></li>
+            <li><span>WhatsApp</span><a href="https://wa.me/5511934775499" target="_blank" rel="noopener">(11) 93477-5499</a></li>
+            <li><span>Instagram</span><a href="https://www.instagram.com/uhestudio" target="_blank" rel="noopener">@uhestudio</a></li>
+            <li><span>Facebook</span><a href="https://www.facebook.com/profile.php?id=61571864136754" target="_blank" rel="noopener">Uh Estúdio</a></li>
+            <li><span>Onde</span><address>São Paulo, SP</address></li>
+          </ul>
+        </div>
+
+        <form class="form reveal" id="contactForm" novalidate>
+          <p class="form__required">Todos os campos são obrigatórios.</p>
+          <label>Nome<input type="text" name="nome" required autocomplete="name" placeholder="Seu nome"></label>
+          <div class="form__row">
+            <label>E-mail<input type="email" name="email" required autocomplete="email" placeholder="voce@email.com"></label>
+            <label>WhatsApp<input type="tel" name="telefone" required autocomplete="tel" inputmode="tel" placeholder="(11) 91234-5678"></label>
+          </div>
+          <label>Tipo de projeto
+            <select name="tipo" required>
+              <option value="" disabled selected>Selecione</option>
+              <option>Residencial</option>
+              <option>Interiores</option>
+              <option>Comercial</option>
+              <option>Reforma</option>
+              <option>Outro</option>
+            </select>
+          </label>
+          <label>Conte um pouco sobre o projeto
+            <textarea name="mensagem" rows="5" required minlength="10" placeholder="Localização, tamanho, prazo, o que você imagina..."></textarea>
+          </label>
+          <button type="submit" class="btn">Enviar mensagem</button>
+          <p class="form__note">Respondemos em até 2 dias úteis.</p>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="footer__top">
+      <a href="#top" class="footer__logo" aria-label="Uh! Estúdio">
+        <img src="assets/img/brand/logo-verde.png" alt="Uh! estúdio" width="1200" height="750">
+      </a>
+      <nav class="footer__nav" aria-label="Rodapé">
+        <a href="#estudio">Estúdio</a>
+        <a href="#projetos">Projetos</a>
+        <a href="#servicos">Serviços</a>
+        <a href="#processo">Processo</a>
+        <a href="#contato">Contato</a>
+      </nav>
+    </div>
+    <div class="footer__bottom">
+      <p>© <span id="year"></span> Uh! Estúdio · Arquitetura e Interiores. Todos os direitos reservados.</p>
+      <p>São Paulo, SP</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
